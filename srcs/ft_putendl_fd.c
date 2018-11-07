@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/07 18:39:43 by afrancoi         ###   ########.fr       */
+/*   Created: 2018/11/07 18:35:47 by afrancoi          #+#    #+#             */
+/*   Updated: 2018/11/07 18:40:50 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-/* Includes */
-
-# include <unistd.h>
-
-/* Prototype */
-
-void	ft_putchar(char c);
-void	ft_putchar_fd(char c, int fd);
-
-int		ft_strlen(char *str);
-
-void	ft_putstr(char const *str);
-void	ft_putstr_fd(char const *str, int fd);
-
-void	ft_putendl(char const *s);
-void	ft_putendl_fd(char const *s, int fd);
-
-
-#endif
+void	ft_putendl_fd(char const *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
