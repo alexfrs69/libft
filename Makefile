@@ -5,7 +5,13 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Sources & Objects
-SRCS = srcs/ft_strlen.c
+SRCS = 	srcs/ft_strlen.c \
+		srcs/ft_putstr.c \
+		srcs/ft_putstr_fd.c \
+		srcs/ft_putchar.c \
+		srcs/ft_putchar_fd.c \
+		srcs/ft_putendl.c \
+		srcs/ft_putendl_fd.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))

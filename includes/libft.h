@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/07 18:39:43 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/07 19:06:27 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 
-int		ft_strlen(char *str);
+int		ft_strlen(char const *str);
 
 void	ft_putstr(char const *str);
 void	ft_putstr_fd(char const *str, int fd);

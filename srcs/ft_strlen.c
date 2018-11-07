@@ -6,11 +6,13 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:55:17 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/07 17:10:06 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/07 19:06:22 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+int		ft_strlen(char const *str)
 {
 	int i;
 

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:19:22 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/07 19:07:58 by afrancoi         ###   ########.fr       */
+/*   Created: 2018/11/06 06:48:50 by afrancoi          #+#    #+#             */
+/*   Updated: 2018/11/07 18:44:53 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *str, int fd)
+void	ft_putnbr(int nb)
 {
-	write(fd, str, ft_strlen(str));
+	if (nb < 0)
+		nb = -nb;
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }
