@@ -12,6 +12,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_putchar_fd.c \
 		srcs/ft_putendl.c \
 		srcs/ft_putendl_fd.c \
+		srcs/ft_putnbr.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
@@ -28,17 +29,21 @@ RM = rm -rf
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar $(ARFLAGS) $(NAME) $(OBJS)
+	@ar $(ARFLAGS) $(NAME) $(OBJS)
+	@echo "Compiling $(NAME)..."
 
 objs/%.o : srcs/%.c
-	mkdir -p $(OBJS_PATH)
-	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+	@mkdir -p $(OBJS_PATH)
+	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+	@echo "Compiling $<..."
 
 clean :
-	$(RM) $(OBJS_PATH)
+	@$(RM) $(OBJS_PATH)
+	@echo "Cleaning $(OBJS_PATH) directory"
 
 fclean : clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "Cleaning $(NAME)"
 
 re : fclean all
 
