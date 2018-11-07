@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/07 18:19:13 by afrancoi         ###   ########.fr       */
+/*   Created: 2018/11/07 18:19:22 by afrancoi          #+#    #+#             */
+/*   Updated: 2018/11/07 18:22:35 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-/* Includes */
-
-# include <unistd.h>
-
-/* Prototype */
-
-void	ft_putchar(char c);
-int		ft_strlen(char *str);
-void	ft_putstr(char const *str);
-
-#endif
+void	ft_putstr(char const *str)
+{
+	write(1, str, ft_strlen(str));
+}
