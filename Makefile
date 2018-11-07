@@ -39,11 +39,11 @@ objs/%.o : srcs/%.c
 
 clean :
 	@$(RM) $(OBJS_PATH)
-	@echo "Cleaning $(OBJS_PATH) directory"
+	@echo "Cleaning $(OBJS_PATH) directory."
 
 fclean : clean
 	@$(RM) $(NAME)
-	@echo "Cleaning $(NAME)"
+	@echo "Cleaning $(NAME)."
 
 re : fclean all
 
