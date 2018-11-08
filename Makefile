@@ -1,8 +1,14 @@
 NAME = libft.a
 
+SHELL = /bin/zsh
 # GCC
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+DEBUG = true
+ifeq ($(DEBUG), true)
+	CFLAGS = -Wall -Wextra -Werror -g
+else
+	CFLAGS = -Wall -Wextra -Werror
+endif
 
 # Sources & Objects
 SRCS = 	srcs/ft_strlen.c \
@@ -27,23 +33,28 @@ ARFLAGS = rcs
 RM = rm -rf
 
 all : $(NAME)
+ifeq ($(DEBUG), true)
+	@echo "\e[1;31m *** DEBUG MODE *** \e[0m"
+else
+	@echo "\e[1;32m RELEASE MODE \e[0m"
+endif
 
 $(NAME) : $(OBJS)
 	@ar $(ARFLAGS) $(NAME) $(OBJS)
-	@echo "Compiling $(NAME)..."
+	@echo "\e[1;32m Creating $@...\e[0m"
 
-objs/%.o : srcs/%.c
+$(OBJS_PATH)%.o : srcs/%.c
 	@mkdir -p $(OBJS_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
-	@echo "Compiling $<..."
+	@echo "\e[1;34m Compiling $<...\e[0m"
 
 clean :
 	@$(RM) $(OBJS_PATH)
-	@echo "Cleaning $(OBJS_PATH) directory."
+	@echo "\e[1;33m Cleaning $(OBJS_PATH) directory. \e[0m"
 
 fclean : clean
 	@$(RM) $(NAME)
-	@echo "Cleaning $(NAME)."
+	@echo "\e[1;33m Cleaning $(NAME). \e[0m"
 
 re : fclean all
 
