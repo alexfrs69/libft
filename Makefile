@@ -28,6 +28,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_toupper.c \
 		srcs/ft_memset.c \
 		srcs/ft_isalpha.c \
+		srcs/ft_isdigit.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))

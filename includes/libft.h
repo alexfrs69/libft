@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/08 15:41:14 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/08 16:01:50 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 int		ft_isalpha(int c);
+int		ft_isdigit(int c);
 
 void	*ft_memset(void *b, int c, size_t len);
 
