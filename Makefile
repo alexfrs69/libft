@@ -1,9 +1,13 @@
+# Main var
 NAME = libft.a
 
 SHELL = /bin/zsh
 # GCC
+
 CC = gcc
+
 DEBUG = true
+
 ifeq ($(DEBUG), true)
 	CFLAGS = -Wall -Wextra -Werror -g
 else
@@ -19,6 +23,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_putendl.c \
 		srcs/ft_putendl_fd.c \
 		srcs/ft_putnbr.c \
+		srcs/ft_putnbr_fd.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
@@ -31,6 +36,8 @@ INCLUDES = -I includes/
 
 ARFLAGS = rcs
 RM = rm -rf
+
+# Compiling & other stuff
 
 all : $(NAME)
 ifeq ($(DEBUG), true)
@@ -45,8 +52,9 @@ $(NAME) : $(OBJS)
 
 $(OBJS_PATH)%.o : srcs/%.c
 	@mkdir -p $(OBJS_PATH)
-	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 	@echo "\e[1;34m Compiling $<...\e[0m"
+	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+	@echo "\e[1;32m $< OK!\e[0m"
 
 clean :
 	@$(RM) $(OBJS_PATH)
@@ -58,4 +66,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY = all clean fclean re
+.PHONY : all clean fclean re
