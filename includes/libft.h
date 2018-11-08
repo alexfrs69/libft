@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/08 13:20:26 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/08 15:24:06 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ void	ft_putnbr_fd(int nb, int fd);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+void	*ft_memset(void *b, int c, size_t len);
 
 #endif
