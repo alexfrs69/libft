@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/08 20:37:01 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/09 16:18:27 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 
 void	*ft_memset(void *b, int c, size_t len);
+void	bzero(void *s, size_t n);
 
 #endif
