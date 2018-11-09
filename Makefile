@@ -32,6 +32,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_isalpha.c \
 		srcs/ft_isdigit.c \
 		srcs/ft_isalnum.c \
+		srcs/ft_isascii.c \
 		srcs/ft_strcmp.c \
 		srcs/ft_bzero.c \
 
