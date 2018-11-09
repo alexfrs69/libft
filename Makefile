@@ -27,6 +27,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_tolower.c \
 		srcs/ft_toupper.c \
 		srcs/ft_memset.c \
+		srcs/ft_memcpy.c \
 		srcs/ft_isalpha.c \
 		srcs/ft_isdigit.c \
 		srcs/ft_isalnum.c \
