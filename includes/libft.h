@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/09 19:40:33 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/09 20:32:37 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 
 /* Prototype */
 
@@ -26,6 +27,7 @@ void	ft_putchar_fd(char c, int fd);
 size_t	ft_strlen(const char *str);
 int		ft_strcmp(char const *s1, const char *s2);
 int		ft_strncmp(char const *s1, const char *s2, size_t n);
+char	*ft_strdup(const char *s1);
 
 void	ft_putstr(char const *str);
 void	ft_putstr_fd(char const *str, int fd);
