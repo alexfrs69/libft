@@ -6,13 +6,13 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:31:38 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/08 15:40:14 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/09 14:36:24 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isalpha(int c)
 {
-	if (c >= 'A' && c <= 'z')
+	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 		return (1);
 	else
 		return (0);

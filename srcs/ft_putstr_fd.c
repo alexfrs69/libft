@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:19:22 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/07 19:07:58 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/09 15:30:37 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char const *str, int fd)
 {
+	if (str == NULL)
+		return ;
 	write(fd, str, ft_strlen(str));
 }
