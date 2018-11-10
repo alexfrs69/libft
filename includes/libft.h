@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/10 20:25:48 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/10 22:24:26 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int		ft_strncmp(char const *s1, const char *s2, size_t n);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 
 void	ft_putstr(char const *str);
 void	ft_putstr_fd(char const *str, int fd);
