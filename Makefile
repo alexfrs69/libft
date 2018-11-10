@@ -44,6 +44,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_strncpy.c \
 		srcs/ft_strcat.c \
 		srcs/ft_strncat.c \
+		srcs/ft_strlcat.c \
 		srcs/ft_bzero.c \
 
 OBJS_PATH = objs/

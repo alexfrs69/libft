@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 22:29:03 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/10 22:31:11 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/10 22:46:22 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	char	*ret;
-	int		len;
+	size_t	len;
 
 	ret = s1;
 	len = ft_strlen(s1);
