@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/12 18:37:05 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:39:25 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,5 @@ void	bzero(void *s, size_t n);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
 #endif
