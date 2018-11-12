@@ -53,6 +53,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_bzero.c \
 		srcs/ft_memalloc.c \
 		srcs/ft_memdel.c \
+		srcs/ft_strnew.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
