@@ -6,14 +6,6 @@ SHELL = /bin/zsh
 
 CC = gcc
 
-DEBUG = true
-
-ifeq ($(DEBUG), true)
-	CFLAGS = -Wall -Wextra -Werror -g
-else
-	CFLAGS = -Wall -Wextra -Werror
-endif
-
 # Sources & Objects
 SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_putstr.c \
@@ -75,11 +67,6 @@ RM = rm -rf
 # Compiling & other stuff
 
 all : $(NAME)
-ifeq ($(DEBUG), true)
-	@echo "\e[1;31m *** DEBUG MODE *** \e[0m"
-else
-	@echo "\e[1;32m RELEASE MODE \e[0m"
-endif
 
 $(NAME) : $(OBJS)
 	@ar $(ARFLAGS) $(NAME) $(OBJS)
