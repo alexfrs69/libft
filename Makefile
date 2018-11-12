@@ -5,7 +5,7 @@ SHELL = /bin/zsh
 # GCC
 
 CC = gcc
-
+CFLAGS = -Wall -Wextra -Werror
 # Sources & Objects
 SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_putstr.c \
@@ -74,9 +74,9 @@ $(NAME) : $(OBJS)
 
 $(OBJS_PATH)%.o : srcs/%.c
 	@mkdir -p $(OBJS_PATH)
-	@echo "\e[1;34m Compiling $<...\e[0m"
+	@echo -n "\e[1;34m Compiling $<...\e[0m "
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
-	@echo "\e[1;32m $< OK!\e[0m"
+	@echo "\e[1;32mOK!\e[0m"
 
 clean :
 	@$(RM) $(OBJS_PATH)
