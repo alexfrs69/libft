@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/13 17:17:31 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/13 22:16:29 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,5 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 #endif
