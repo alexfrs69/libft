@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 18:26:21 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/12 18:29:21 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/13 19:39:13 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_memalloc(size_t size)
 
 	if (!(ptr = (void *)malloc(size)))
 		return (NULL);
-	memset(ptr, 0, size);
+	ft_memset(ptr, 0, size);
 	return (ptr);
 }
