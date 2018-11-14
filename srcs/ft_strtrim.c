@@ -6,11 +6,12 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 18:13:03 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/13 19:35:52 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/14 02:51:24 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_isspace(int c)
 {

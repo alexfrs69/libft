@@ -6,18 +6,14 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/14 01:30:00 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/14 02:44:33 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/* Includes */
-
-# include <unistd.h>
 # include <string.h>
-# include <stdlib.h>
 
 /* Prototypes */
 

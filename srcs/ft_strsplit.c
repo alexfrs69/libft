@@ -6,11 +6,12 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:14:21 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/13 23:56:07 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/14 02:51:36 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int		ft_countwords(char const *str, char c)
 {
