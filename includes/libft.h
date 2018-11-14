@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/14 04:46:31 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/14 05:11:55 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,6 @@ char	*ft_itoa(int n);
 
 /* Bonus Part */
 t_list	*ft_lstnew(void const *content, size_t content_size);
-
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **alst, void (del*)(void *, size_t));
 #endif
