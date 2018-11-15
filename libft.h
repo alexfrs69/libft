@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/15 18:08:23 by afrancoi         ###   ########.fr       */
+/*   Updated: 2018/11/15 21:38:02 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-
+int					ft_sqrt(int nb);
+int					ft_islower(int c);
+int					ft_isupper(int c);
+int					ft_factorial(int nb);
+int					ft_isprime(int nb);
+int					ft_nextprime(int nb);
 #endif
