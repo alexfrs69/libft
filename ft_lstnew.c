@@ -1,49 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 16:29:13 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/12 17:19:33 by afrancoi         ###   ########.fr       */
+/*   Created: 2018/11/14 04:34:03 by afrancoi          #+#    #+#             */
+/*   Updated: 2018/11/15 21:17:43 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static int		ft_isspace(int c)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f')
-		return (1);
-	else if (c == ' ')
-		return (1);
-	else
-		return (0);
-}
+	t_list *list;
 
-int				ft_atoi(const char *str)
-{
-	int ret;
-	int min;
-
-	ret = 0;
-	min = 0;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
+	if (!(list = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
 	{
-		min = 1;
-		str++;
+		list->content = NULL;
+		list->content_size = 0;
 	}
-	while (*str && ft_isdigit(*str))
-	{
-		ret *= 10;
-		ret += *str - '0';
-		str++;
-	}
-	if (min)
-		return (-ret);
 	else
-		return (ret);
+	{
+		if (!(list->content = malloc(content_size)))
+			return (NULL);
+		ft_memcpy(list->content, content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 05:30:05 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/14 05:34:39 by afrancoi         ###   ########.fr       */
+/*   Created: 2018/11/12 18:44:57 by afrancoi          #+#    #+#             */
+/*   Updated: 2018/11/15 20:33:51 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_striter(char *s, void (*f)(char *))
 {
-	while (lst)
+	if (!s || !f)
+		return ;
+	while (*s)
 	{
-		f(lst);
-		lst = lst->next;
+		f(&*s);
+		s++;
 	}
 }
