@@ -65,8 +65,15 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_lstadd.c \
 		srcs/ft_lstiter.c \
 		srcs/ft_lstmap.c \
+		srcs/ft_sqrt.c \
+		srcs/ft_factorial.c \
+		srcs/ft_islower.c \
+		srcs/ft_isupper.c \
+		srcs/ft_isprime.c \
+		srcs/ft_nextprime.c \
 
-OBJS = $(patsubst srcs/%.c, objs/%.o, $(SRCS))
+OBJS_PATH = objs/
+OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
 
 # Includes
 
@@ -85,14 +92,15 @@ $(NAME) : $(OBJS)
 	@ar $(ARFLAGS) $(NAME) $(OBJS)
 	@echo "\e[1;32m Creating $@...\e[0m"
 
-objs/%.o : srcs/%.c
+$(OBJS_PATH)%.o : srcs/%.c
+	@mkdir -p $(OBJS_PATH)
 	@echo -n "\e[1;34m Compiling $<...\e[0m "
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 	@echo "\e[1;32mOK!\e[0m"
 
 clean :
-	@$(RM) $(OBJS)
-	@echo "\e[1;33m Cleaning Objects. \e[0m"
+	@$(RM) $(OBJS_PATH)
+	@echo "\e[1;33m Cleaning $(OBJS_PATH) directory. \e[0m"
 
 fclean : clean
 	@$(RM) $(NAME)
