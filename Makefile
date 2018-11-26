@@ -71,6 +71,8 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_isupper.c \
 		srcs/ft_isprime.c \
 		srcs/ft_nextprime.c \
+		srcs/ft_strndup.c \
+		srcs/ft_strnlen.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
