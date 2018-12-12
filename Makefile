@@ -73,6 +73,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_nextprime.c \
 		srcs/ft_strndup.c \
 		srcs/ft_strnlen.c \
+		srcs/get_next_line.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
@@ -102,7 +103,7 @@ $(OBJS_PATH)%.o : srcs/%.c
 
 clean :
 	@$(RM) $(OBJS_PATH)
-	@echo "\e[1;33m Cleaning $(OBJS_PATH) directory. \e[0m"
+	@echo "\e[1;33m Cleaning libft objects. \e[0m"
 
 fclean : clean
 	@$(RM) $(NAME)
