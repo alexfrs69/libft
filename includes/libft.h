@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afrancoi <afrancoi@student.42fr>           +#+  +:+       +#+        */
+/*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/12/12 04:43:53 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/02/02 13:30:38 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int					ft_sqrt(int nb);
+double				ft_sqrt(int nb, int count);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_factorial(int nb);

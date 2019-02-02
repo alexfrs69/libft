@@ -6,21 +6,20 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 07:45:37 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/15 21:21:45 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/02/02 13:31:39 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int nb)
+double		ft_sqrt(int nb, int count)
 {
-	int i;
+	double	x;
+	int		rnds;
 
-	i = 0;
-	if (nb <= 0)
-		return (0);
-	while (i * i < nb)
-		i++;
-	if ((nb % i) == 0)
-		return (i);
-	else
-		return (0);
+	if (!count || count < 0)
+		count = 5;
+	rnds = -1;
+	x = nb / 2;
+	while (++rnds < count)
+		x = (x + nb / x) * 0.5;
+	return (x);
 }
