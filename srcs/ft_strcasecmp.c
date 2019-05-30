@@ -6,7 +6,7 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:37:55 by afrancoi          #+#    #+#             */
-/*   Updated: 2019/05/30 12:42:16 by root             ###   ########.fr       */
+/*   Updated: 2019/05/30 12:44:52 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ int	ft_strcasecmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-	return (ft_tolower(*(const unsigned char*)s1) - ft_tolower(*(const unsigned char*)s2));
+	return (ft_tolower(*(const unsigned char*)s1)
+			- ft_tolower(*(const unsigned char*)s2));
 }
