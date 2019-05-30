@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2019/04/17 22:04:37 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/05/30 12:42:34 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ size_t				ft_strlen(const char *str);
 size_t				ft_strnlen(const char *str, size_t n);
 int					ft_strcmp(char const *s1, const char *s2);
 int					ft_strncmp(char const *s1, const char *s2, size_t n);
+int					ft_strcasecmp(const char *s1, const char *s2);
 char				*ft_strdup(const char *s1);
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strcpy(char *dst, const char *src);
