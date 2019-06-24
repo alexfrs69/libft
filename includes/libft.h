@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2019/05/30 12:42:34 by root             ###   ########.fr       */
+/*   Updated: 2019/06/24 20:19:51 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				ft_bzero(void *s, size_t n);
 int					ft_atoi(const char *str);
 void				*ft_memalloc(size_t size);
+void				*ft_realloc(void *ptr, size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
@@ -91,4 +92,5 @@ int					ft_isprime(int nb);
 int					ft_nextprime(int nb);
 int					ft_strichr(const char *s, int c);
 double				ft_pow(double base, double exponent);
+void				ft_del_arrays(char **tab);
 #endif

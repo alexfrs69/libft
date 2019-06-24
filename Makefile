@@ -5,7 +5,7 @@ SHELL = /bin/zsh
 # GCC
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g3 -Wall -Wextra -Werror
 # Sources & Objects
 SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_putstr.c \
@@ -24,6 +24,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_memmove.c \
 		srcs/ft_memchr.c \
 		srcs/ft_memcmp.c \
+		srcs/ft_realloc.c \
 		srcs/ft_isalpha.c \
 		srcs/ft_isdigit.c \
 		srcs/ft_isalnum.c \
@@ -77,6 +78,7 @@ SRCS = 	srcs/ft_strlen.c \
 		srcs/ft_strichr.c \
 		srcs/ft_pow.c \
 		srcs/get_next_line.c \
+		srcs/ft_del_arrays.c \
 
 OBJS_PATH = objs/
 OBJS = $(patsubst srcs/%.c,$(OBJS_PATH)%.o, $(SRCS))
@@ -98,6 +100,7 @@ $(NAME) : $(OBJS)
 	@printf "\e[1;32m%-30s\e[0m" "Creating $@"
 	@ar $(ARFLAGS) $(NAME) $(OBJS)
 	@printf "\e[1;32m%08s\e[0m\n" "[ OK ]"
+
 $(OBJS_PATH)%.o : srcs/%.c
 	@mkdir -p $(OBJS_PATH)
 	@printf "\e[1;36m%-30s\e[0m" "$<"

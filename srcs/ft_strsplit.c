@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:14:21 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/15 20:24:38 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/06/24 20:24:46 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,20 +55,21 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	wordscount = ft_countwords(s, c);
-	if (!(ret = (char**)malloc(sizeof(char*) * wordscount + 1)))
+	if (!(ret = (char**)ft_memalloc(sizeof(char*) * (wordscount + 1))))
 		return (NULL);
-	words = 0;
-	while (words < wordscount)
+	words = -1;
+	while (++words < wordscount)
 	{
 		while (*s == c && *s)
 			s++;
 		if (!(ret[words] = ft_strnew(ft_wordlen(s, c))))
+		{
+			ft_del_arrays(ret);
 			return (NULL);
+		}
 		i = 0;
 		while (*s != c && *s)
 			ret[words][i++] = *s++;
-		words++;
 	}
-	ret[words] = ((void*)0);
 	return (ret);
 }
