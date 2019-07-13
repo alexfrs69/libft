@@ -24,7 +24,6 @@ SRCS = 	srcs/ft_strlen.c		\
 		srcs/ft_memmove.c		\
 		srcs/ft_memchr.c		\
 		srcs/ft_memcmp.c		\
-		srcs/ft_realloc.c		\
 		srcs/ft_isalpha.c		\
 		srcs/ft_isdigit.c		\
 		srcs/ft_isalnum.c		\
