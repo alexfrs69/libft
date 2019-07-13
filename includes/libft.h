@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2019/06/24 20:19:51 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/07/10 05:04:20 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,5 @@ int					ft_nextprime(int nb);
 int					ft_strichr(const char *s, int c);
 double				ft_pow(double base, double exponent);
 void				ft_del_arrays(char **tab);
+char				*ft_pathjoin(char *path, char *name);
 #endif

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_del_arrays.c                                    :+:      :+:    :+:   */
+/*   ft_pathjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/24 20:18:45 by afrancoi          #+#    #+#             */
-/*   Updated: 2019/07/10 09:20:30 by afrancoi         ###   ########.fr       */
+/*   Created: 2019/07/10 04:56:53 by afrancoi          #+#    #+#             */
+/*   Updated: 2019/07/10 08:37:58 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_del_arrays(char **tab)
+char	*ft_pathjoin(char *path, char *name)
 {
-	int i;
+	char *ret;
+	char *tmp;
 
-	i = -1;
-	if (!tab)
-		return ;
-	while (tab[++i])
-		ft_strdel(&tab[i]);
-	free(tab);
-	tab = NULL;
+	if (!path)
+		return (NULL);
+	if (*path == '/' && ft_strlen(path) == 1)
+		return (ft_strjoin(path, name));
+	tmp = ft_strjoin(path, "/");
+	ret = ft_strjoin(tmp, name);
+	ft_strdel(&tmp);
+	return (ret);
 }
