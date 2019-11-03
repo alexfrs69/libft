@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:13:42 by afrancoi          #+#    #+#             */
-/*   Updated: 2019/07/10 05:04:20 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/11/03 00:37:12 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
-char				**ft_strsplit(char const *s, char c);
+char				**ft_strsplit(char const *str, char *charset);
 char				*ft_itoa(int n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
@@ -94,4 +94,5 @@ int					ft_strichr(const char *s, int c);
 double				ft_pow(double base, double exponent);
 void				ft_del_arrays(char **tab);
 char				*ft_pathjoin(char *path, char *name);
+int					ft_strirchr(const char *s, int c);
 #endif

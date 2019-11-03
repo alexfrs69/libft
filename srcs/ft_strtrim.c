@@ -6,7 +6,7 @@
 /*   By: afrancoi <afrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 18:13:03 by afrancoi          #+#    #+#             */
-/*   Updated: 2018/11/14 02:51:24 by afrancoi         ###   ########.fr       */
+/*   Updated: 2019/11/03 01:23:22 by afrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char		*ft_strtrim(char const *s)
 	while (ft_isspace(*s) && *s)
 		s++;
 	end = ft_strlen(s) - 1;
-	while (ft_isspace(s[end]))
+	while (ft_isspace(s[end]) && end >= 0)
 		end--;
 	if (end <= 0)
 		len = 0;
